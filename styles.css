@@ -1,0 +1,323 @@
+
+@font-face {
+    font-family: 'MrsEavesItalic_Italic';
+    src: url('fonts/MrsEavesItalic_Italic.eot');
+    src: url('fonts/MrsEavesItalic_Italic.eot') format('embedded-opentype'),
+    url('fonts/MrsEavesItalic_Italic.woff2') format('woff2'),
+    url('fonts/MrsEavesItalic_Italic.woff') format('woff'),
+    url('fonts/MrsEavesItalic_Italic.ttf') format('truetype'),
+    url('fonts/MrsEavesItalic_Italic.svg#MrsEavesItalic_Italic') format('svg');
+    font-weight: 400;
+    font-style: italic
+}
+@font-face {
+    font-family: 'SegoeWPNLight';
+    src: url('fonts/SegoeWPNLight.eot');
+    src: url('fonts/SegoeWPNLight.eot') format('embedded-opentype'),
+    url('fonts/SegoeWPNLight.woff2') format('woff2'),
+    url('fonts/SegoeWPNLight.woff') format('woff'),
+    url('fonts/SegoeWPNLight.ttf') format('truetype'),
+    url('fonts/SegoeWPNLight.svg#SegoeWPNLight') format('svg');
+    font-weight: 300;
+    font-style: normal
+}
+@font-face {
+    font-family: 'SegoeWPSemibold';
+    src: url('fonts/SegoeWPSemibold.eot');
+    src: url('fonts/SegoeWPSemibold.eot') format('embedded-opentype'),
+    url('fonts/SegoeWPSemibold.woff2') format('woff2'),
+    url('fonts/SegoeWPSemibold.woff') format('woff'),
+    url('fonts/SegoeWPSemibold.ttf') format('truetype'),
+    url('fonts/SegoeWPSemibold.svg#SegoeWPSemibold') format('svg');
+    font-weight: 600;
+    font-style: normal
+}
+@font-face {
+    font-family: 'UniversCE45Light';
+    src: url('fonts/UniversCE45Light.eot');
+    src: url('fonts/UniversCE45Light.eot') format('embedded-opentype'),
+    url('fonts/UniversCE45Light.woff2') format('woff2'),
+    url('fonts/UniversCE45Light.woff') format('woff'),
+    url('fonts/UniversCE45Light.ttf') format('truetype'),
+    url('fonts/UniversCE45Light.svg#UniversCE45Light') format('svg');
+    font-weight: 300;
+    font-style: normal
+}
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+    color: #8A8888;
+}
+.menu_icon {
+    display: none;
+}
+.header_main {
+     background: url("img/header.png") no-repeat;
+}
+.container {
+    max-width: 1280px;
+}
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 154px 0 221px;
+    box-sizing: border-box;
+
+}
+.header_logo {
+    text-decoration: none;
+    font-size: 115px;
+    color: white;
+    font-family: 'MrsEavesItalic_Italic', sans-serif;
+    padding: 0;
+    margin-top: 30px;
+}
+
+
+.banner_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 296px 0 247px;
+    box-sizing: border-box;
+}
+.ban_text {
+    display: flex;
+    flex-direction: column;
+}
+.span_1 {
+    color: white;
+    font-family: 'SegoeWPSemibold', sans-serif;
+    font-size: 63px;
+}
+.span_2 {
+    color: white;
+    font-family: 'SegoeWPNLight', sans-serif;
+    font-size: 43px;
+}
+.banner_button {
+    margin: auto;
+    padding: 30px 0 0 9px;
+}
+.ban_button {
+    font-family: 'SegoeWPNLight', sans-serif;
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+    padding: 3px 19px;
+    background: #12B367;
+    border: 1px solid #0f141e;
+}
+.ban_img {
+     position: relative;
+     top: 37px;
+ }
+/*                         Таблица                                     */
+
+
+.tabs {
+    max-width: 1024px;
+    margin-top: 56px;
+    font-size: 0;
+    margin-left: auto;
+    margin-right: auto;
+     text-align: center;
+}
+
+.tabs>input[type="radio"] {
+    display: none;
+}
+
+.tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid gray;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3,
+#tab-btn-4:checked~#content-4 {
+    display: block;
+}
+
+.tabs>label {
+    display: inline-block;
+    width: 248px;
+    padding: 28px 0 35px 0;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    /* position: relative; */
+    top: 1px;
+}
+
+.tabs>label:not(:first-of-type) {
+    border-left: none;
+    margin-left: 10px;
+}
+
+.tabs>input[type="radio"]:checked+label {
+    border: 1px solid gray;
+    border-bottom: 2px solid white;
+}
+/* Контент*/
+.content_img {
+    padding-top: 25px;
+}
+.content_text {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    /*position: relative;*/
+    bottom: 19px;
+    padding: 0 30px 0 44px;
+}
+.text_one {
+    font-family: 'SegoeWPNLight', sans-serif;
+    font-size: 38px;
+    padding-bottom: 23px;
+}
+.text_second, .text_third {
+    font-family: 'UniversCE45Light', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    padding-bottom: 23px;
+}
+/*Choose*/
+.main_choose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 60px 75px 114px;
+}
+h3 {
+    font-family: 'SegoeWPNLight', sans-serif;
+    font-size: 32px;
+    margin: 0 0 0 19px;
+}
+.list  li {
+    font-family: 'UniversCE45Light', sans-serif;
+    font-size: 15px;
+    padding-left: 12px;
+}
+.list p {
+    color: #8A8888;
+}
+.list {
+    margin: 0;
+    padding-top: 9px;
+}
+.list li::marker {
+    content: url("img/Shape 15.png");
+}
+.Member_Subscribe {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 145px 35px 130px;
+}
+.member, .subscribe {
+    background: url("img/member.png") no-repeat;
+    background-size: cover;
+    max-width: 470px;
+    border-radius: 5px;
+}
+.member, .subscribe, .email, .subscribe_subm, .member_subm {
+    width: 100%;
+}
+.inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px 20px 29px;
+}
+
+.inner {}
+.member_form, .subscribe_form {
+    display: flex;
+    justify-content: space-between;
+}
+.subscribe {
+    background: url("img/subscribe.png") no-repeat;
+}
+h2 {
+    color: white;
+    font-size: 28px;
+    font-family: 'SegoeWPNLight', sans-serif;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+input {
+    font-family: 'SegoeWPNLight', sans-serif;
+    font-size: 16px;
+}
+.email {
+     max-width: 258px;
+}
+.subscribe_subm, .member_subm{
+    color: white;
+    border: none;
+}
+.member_subm {
+    max-width: 94px;
+    background-color: #444444;
+}
+.subscribe_subm {
+    max-width: 111px;
+    background-color: #029BB1;
+}
+/*Footer navigateion*/
+.nav_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 140px 0 175px;
+    background: url("img/footer.png") no-repeat;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+.nav_footer a, p {
+    color: white;
+    opacity: 0.5;
+    text-decoration: none;
+    margin: 0;
+}
+.nav_footer a:hover {
+    opacity: 1;
+    transition: 0.6s;
+    position: relative;
+    left: 2px;
+}
+.nav_footer h3 {
+    font-family: 'SegoeWPNLight', sans-serif;
+    font-size: 22px;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.nav_footer ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.testimo {
+    max-width: 317px;
+}
+.logo_footer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.logo_footerInner {
+    font-family: 'MrsEavesItalic_Italic', sans-serif;
+    font-size: 115px;
+    opacity: 0.2;
+}
